@@ -1,8 +1,13 @@
 RSpec.describe User do
-  it 'should have many tweets' do
-
+  it 'has many tweets' do
+    should have_many(:tweets)
   end
-  it 'should require a email' do
 
+  it 'requires a handle' do
+    should validate_presence_of(:handle)
+  end
+
+  it 'requires an email' do
+    should validate_presence_of(:email)
   end
 end
