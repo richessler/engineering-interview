@@ -11,11 +11,11 @@ RSpec.describe TweetsController do
       expect(assigns(:tweets)).to be_present
     end
 
-    it 'rendera a 200 status code' do
+    it 'renders a 200 status code' do
       expect(response).to be_success
     end
 
-    it 'rendera the index template' do
+    it 'renders the index template' do
       expect(response).to render_template(:index)
     end
   end
