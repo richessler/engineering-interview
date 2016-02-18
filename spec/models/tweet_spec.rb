@@ -1,8 +1,8 @@
 RSpec.describe Tweet do
-  it 'should belong to a user' do
-
+  it 'belongs to a user' do
+    should belong_to(:user)
   end
-  it 'should require a name' do
-
+  it 'requires a name' do
+    should validate_presence_of(:name)
   end
 end
